@@ -51,16 +51,14 @@ Text(app, text = "Chào mừng đã đến với máy chuyển đổi đơn vị
 change_unit_box = Box(app, align = "top", height = 100, width = 515)
 input_value = TextBox(change_unit_box, text = "", width = 12, height = 2, multiline = True, align = "left")
 input_value.bg = "white"
-input_unit = Combo(change_unit_box, options = ['mm', 'cm', 'dm', 'm', 'km', 'g ', 'kg ', '(tấn)ton ', 'mL', 'L', '(khối)kL', 'm^2', 'hm^2', 
-                                   'km^2', 'cm^3', 'dm^3', 'm^3', '(giây)seconds', '(phút)minutes', '(giờ)hours', 'MB', 'GB', 'TB'], command = change_output_value, align = "left")
+input_unit = Combo(change_unit_box, options = dictionary_of_unit.keys(), command = change_output_value, align = "left")
 input_unit.bg = "white"
 change_unit_button = PushButton(change_unit_box, text = "Chuyển đổi", width = 8, height = 2, command = change_unit, align = "left")
 change_unit_button.bg = "lightblue"
 output_value = TextBox(change_unit_box, text = "", width = 12, height = 2, multiline = True, align = "left")
 output_value.bg = "white"
 output_value.disable()
-output_unit = Combo(change_unit_box, options = ['mm', 'cm', 'dm', 'm', 'km', 'g ', 'kg ', '(tấn)ton ', 'mL', 'L', '(khối)kL', 'm^2', 'hm^2', 
-                                    'km^2', 'cm^3', 'dm^3', 'm^3', '(giây)seconds', '(phút)minutes', '(giờ)hours', 'MB', 'GB', 'TB'], command = change_output_value, align = "left")
+output_unit = Combo(change_unit_box, options = dictionary_of_unit.keys(), command = change_output_value, align = "left")
 output_unit.bg = "white"
 your_changes_box = Box(app, width = 515, height = 400, align = "top")
 lst_about_your_changes = ListBox(your_changes_box, items = [], width = 415, height = 400, align = "left", scrollbar = True)
