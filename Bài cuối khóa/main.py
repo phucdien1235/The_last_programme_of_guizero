@@ -101,9 +101,9 @@ def show_rules(): # Hiển thị luật lệ
         change_window_box = Box(box_picture, align = "bottom", width = 200, height = 100)
         previous_button = PushButton(change_window_box, align = "left", width = 10, height = 2, text = "Previous", command = what_page, args = [-1])
         next_button = PushButton(change_window_box, align = "left", width = 10, height = 2, text = "Next", command = what_page, args = [1])
-app = App(title = "Máy chuyển đổi đơn vị", width = 515, height = 500, bg = "lightyellow")
+app = App(title = "Máy chuyển đổi đơn vị", width = 615, height = 500, bg = "lightyellow")
 Text(app, text = "Chào mừng đã đến với máy chuyển đổi đơn vị!")
-change_unit_box = Box(app, align = "top", height = 100, width = 515)
+change_unit_box = Box(app, align = "top", height = 100, width = 615)
 input_value = TextBox(change_unit_box, text = "", width = 12, height = 2, multiline = True, align = "left")
 input_value.text_size = 15
 input_value.bg = "white"
@@ -117,9 +117,9 @@ output_value.bg = "white"
 output_value.disable()
 output_unit = Combo(change_unit_box, options = dictionary_of_unit.keys(), command = change_output_value, align = "left")
 output_unit.bg = "white"
-main_box = Box(app, width = 515, height = 400, align = "top")
-your_changes_box = Box(main_box, width = 415, height = 400, align = "left")
-lst_about_your_changes = ListBox(your_changes_box, items = [], width = 415, height = 400, align = "left", scrollbar = True)
+main_box = Box(app, width = 615, height = 400, align = "top")
+your_changes_box = Box(main_box, width = 515, height = 400, align = "left")
+lst_about_your_changes = ListBox(your_changes_box, items = [], width = 515, height = 400, align = "left", scrollbar = True)
 lst_about_your_changes.bg = "#B4E6BC"
 lst_about_your_changes.text_size = 20
 with open("Bài cuối khóa/calculate_file.txt", "r") as file:
