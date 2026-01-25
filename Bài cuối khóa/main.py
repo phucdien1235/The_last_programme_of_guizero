@@ -105,12 +105,14 @@ app = App(title = "Máy chuyển đổi đơn vị", width = 515, height = 500, 
 Text(app, text = "Chào mừng đã đến với máy chuyển đổi đơn vị!")
 change_unit_box = Box(app, align = "top", height = 100, width = 515)
 input_value = TextBox(change_unit_box, text = "", width = 12, height = 2, multiline = True, align = "left")
+input_value.text_size = 15
 input_value.bg = "white"
 input_unit = Combo(change_unit_box, options = dictionary_of_unit.keys(), command = change_output_value, align = "left")
 input_unit.bg = "white"
 change_unit_button = PushButton(change_unit_box, text = "Chuyển đổi", width = 8, height = 2, command = change_unit, align = "left")
 change_unit_button.bg = "lightblue"
 output_value = TextBox(change_unit_box, text = "", width = 12, height = 2, multiline = True, align = "left")
+output_value.text_size = 15
 output_value.bg = "white"
 output_value.disable()
 output_unit = Combo(change_unit_box, options = dictionary_of_unit.keys(), command = change_output_value, align = "left")
@@ -128,5 +130,6 @@ rules_button = PushButton(box_tools, width = 10, height = 2, align = "top", text
 rules_button.bg = "#9CA7FE"
 clear_button = PushButton(box_tools, width = 10, height = 2, align = "top", text = "Clear", command = clear_all_your_changes)
 clear_button.bg = "lightblue"
+
 
 app.display()
